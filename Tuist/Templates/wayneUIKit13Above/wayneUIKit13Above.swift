@@ -3,10 +3,7 @@ import ProjectDescriptionHelpers
 
 let wayneUIKit13AboveTemplate = Template(
     description: "Wayne's UIKit template for iOS 13 above",
-    attributes: [
-        nameAttribute,
-        platformAttribute,
-    ],
+    attributes: [nameAttribute],
     items:
         xcasset(path: appPath) +
     [
@@ -51,7 +48,7 @@ let wayneUIKit13AboveTemplate = Template(
         ),
         .file(
             path: projectPath + "/Tuist/Dependencies.swift",
-            templatePath: templatePath("Dependencies+\(platformAttribute).stencil")
+            templatePath: templatePath("Dependencies.stencil")
         )
     ]
 )

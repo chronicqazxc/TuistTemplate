@@ -2,7 +2,6 @@ import ProjectDescription
 
 // Name of the target
 public let nameAttribute: Template.Attribute = .required("name")
-public let platformAttribute: Template.Attribute = .optional("platform", default: "iOS")
 public let appPath = "Targets/\(nameAttribute)"
 public let projectPath = "."
 

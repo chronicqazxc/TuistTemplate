@@ -1,7 +1,6 @@
 import ProjectDescription
 
 private let nameAttribute: Template.Attribute = .required("name")
-private let platformAttribute: Template.Attribute = .optional("platform", default: "iOS")
 private let kitFrameworkPath = "Targets/\(nameAttribute)"
 private let projectPath = "."
 
@@ -11,10 +10,7 @@ private func templatePath(_ path: String) -> Path {
 
 let wayneFrameworkTemplate = Template(
     description: "Wayne's framework template",
-    attributes: [
-        nameAttribute,
-        platformAttribute,
-    ],
+    attributes: [nameAttribute],
     items: [
         // Template Files
         .string(

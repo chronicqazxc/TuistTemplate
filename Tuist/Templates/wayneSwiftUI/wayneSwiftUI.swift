@@ -3,10 +3,7 @@ import ProjectDescriptionHelpers
 
 let wayneSwiftUITemplate = Template(
     description: "Wayne's SwiftUI template",
-    attributes: [
-        nameAttribute,
-        platformAttribute,
-    ],
+    attributes: [nameAttribute],
     items:
         xcasset(path: appPath) +
     [
@@ -47,7 +44,7 @@ let wayneSwiftUITemplate = Template(
         ),
         .file(
             path: projectPath + "/Tuist/Dependencies.swift",
-            templatePath: templatePath("Dependencies+\(platformAttribute).stencil")
+            templatePath: templatePath("Dependencies.stencil")
         ),
         .file(
             path: projectPath + "/Tuist/Config.swift",
