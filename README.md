@@ -1,2 +1,2 @@
 # TuistTemplate
-My customized Tuist template
+Customized Tuist template
