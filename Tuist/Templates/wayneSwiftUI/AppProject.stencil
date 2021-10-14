@@ -13,7 +13,7 @@ let dependencies: [TargetDependency] = [
     .external(name: "Alamofire"),
     .external(name: "Kingfisher")
 ]
-                                 
+
 func makeAppTargets(name: String) -> [Target] {
     let appTarget = Target(name: name,
                             platform: .iOS,
@@ -28,7 +28,8 @@ func makeAppTargets(name: String) -> [Target] {
                                 base: [
                                     "GENERATE_INFOPLIST_FILE": true,
                                     "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents": true,
-                                    "INFOPLIST_KEY_UILaunchScreen_Generation": true
+                                    "INFOPLIST_KEY_UILaunchScreen_Generation": true,
+                                    "INFOPLIST_KEY_UIApplicationSceneManifest_Generation": true
                                 ],
                                 configurations: configurations,
                                 defaultSettings: .recommended)
@@ -43,7 +44,7 @@ func makeAppTargets(name: String) -> [Target] {
                                 dependencies: [.target(name: name)])
     return [appTarget, appTestTarget]
 }
-                                 
+
 func makeFrameworkTargets(name: String) -> [Target] {
         let sources = Target(name: name,
                 platform: .iOS,
